@@ -21,6 +21,5 @@ class SinExecuter(object):
         output = client.execute(cmd,
                                 bind=bind_dir+":/data",
                                 options=['--pwd','/data', '--cleanenv'], stream=True)
-        for line in output:
-            print(line)
+        return output
 
